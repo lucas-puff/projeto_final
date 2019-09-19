@@ -1,0 +1,9 @@
+<h3>Listagem de Clietes</h3>
+
+<ul class="list-group">
+    <li *ngFor="let cadastro of Cadastros" class="list-group-item">
+        <a routerLink="/cadastrodetail/{{cadastro.id}}" >
+            <h4>{{cadastro.nome}}</h4>
+        </a>
+    </li>
+</ul>

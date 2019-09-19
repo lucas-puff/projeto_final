@@ -1,0 +1,19 @@
+<h3>Cadastro de cliente</h3>
+<form #formulario="ngForm" (ngSubmit) = "onSubmit(formulario)" class="form-horizontal" >
+
+    <div class="form-group">
+        <div class="col-sm-12">
+            <label for="nome" class="control-label">Nome</label>
+        </div>
+
+        <div class="col-sm-12">
+            <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome" 
+            required #nome="ngModel" [(ngModel)]="cadastro.nome">
+        </div>
+    </div>
+
+    <button type="submit" [disabled]="!formulario.valid" class="btn btn-primary">Submeter</button>
+
+</form>
+
+<app-cadastro-listagem> </app-cadastro-listagem>
